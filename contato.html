@@ -21,25 +21,28 @@
         <div>
             <form>
                 <label for="nome">Nome:</label><br>
-                <input type="text" id="nome">
+                <input type="text" id="nome" onkeyup='validaNome()''>
+               <div id='txtNome'></div>
                 <br>
                 <br>
                 <label for="email">E-mail:</label><br>
-                <input type="email" id="email">
+                <input type="email" id="email" onkeyup='validaEmail()'>
+                <div id='txtEmail'></div>
                 <br>
                 <br>
                 <label for="assunto">Assunto:</label><br>
-                <textarea name="assunto" id="assunto" cols="60" rows="8"></textarea>
+                <textarea name="assunto" id="assunto" cols="60" rows="8" onkeyup='validaAssunto()'></textarea>
+                <div id='txtAssunto'></div>
                 <br>
-                <br>
-                <button>Enviar</button>
+                <br> 
+                <button onclick="enviar()">Enviar</button>
             </form>
         </div>
         <div class="ml-50">
             <h2>Endereço:</h2>
             <p>Rua Tangaraca, 154</p>
             <p>São Paulo - SP</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.9283661350673!2d-46.4628301850234!3d-23.499089534713818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6112fb4ad48d%3A0x9869a0ff18794d40!2sJardim%20Pedro%20Jos%C3%A9%20Nunes%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2008061-150!5e0!3m2!1spt-BR!2sbr!4v1623859860010!5m2!1spt-BR!2sbr" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>   
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.9283661350673!2d-46.4628301850234!3d-23.499089534713818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6112fb4ad48d%3A0x9869a0ff18794d40!2sJardim%20Pedro%20Jos%C3%A9%20Nunes%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2008061-150!5e0!3m2!1spt-BR!2sbr!4v1623859860010!5m2!1spt-BR!2sbr" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy" onmousemove="mapaZoom()" onmouseout="mapaNormal()" id="mapa"></iframe>   
         </div>
     </div>
     <hr>
@@ -61,5 +64,6 @@
         </p>  
     </footer>
 
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
