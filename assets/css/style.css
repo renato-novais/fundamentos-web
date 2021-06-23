@@ -1,4 +1,18 @@
+/* Estilo global */
+
+:root{
+    --black: #101518;
+    --white: #FFFFFC;
+    --mediumblue: #0000CD;
+}
+
+body {
+color: var(--white);
+background-color: var(--black);
+}
+
 /* Estilos da página index.html */
+
 .p1 {
     font-size: 30px;
 }
@@ -26,7 +40,7 @@
 
 #menu li a {
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 20px;
 }
 
